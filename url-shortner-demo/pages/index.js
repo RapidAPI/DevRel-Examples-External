@@ -163,15 +163,20 @@ export default function Home() {
           remember and share."
         />
       </Head>
+
       <canvas
         id="my-canvas"
         className="fixed top-0 left-0 h-full z-[0]"
       ></canvas>
+
       <Toaster position="bottom-right" reverseOrder={false} />
+
       <div className="min-h-screen h-full w-full flex items-center justify-center flex-col py-[20vh] text-[#222] z-10 relative">
         {success ? (
-          <div className="flex items-center justify-center flex-col transition duration-500">
-            <h1 className="font-bold text-4xl">🎉 Success, shortened URL</h1>
+          <div className="flex items-center justify-center flex-col transition duration-500 text-center">
+            <h1 className="font-bold text-4xl">
+              🎉 Success, Shortened your URL
+            </h1>
             <p className="my-2 text-[#666]">
               Successfully shortened the URL. Here you have it.
               <a
@@ -183,7 +188,7 @@ export default function Home() {
             </p>
           </div>
         ) : (
-          <div className="flex items-center justify-center flex-col transition duration-500">
+          <div className="flex items-center justify-center flex-col transition duration-500 text-center">
             <h1 className="font-bold text-4xl">Short URLs, Better Clicks</h1>
             <p className="my-2 text-[#666]">
               Simple and fast tool to create a shortened URL making it easy to
@@ -191,10 +196,10 @@ export default function Home() {
             </p>
           </div>
         )}
-        <div className="p-4 bg-white shadow-xl rounded-md flex items-center mt-3 border border-[#ccc] focus-within:border-blue-400 group transition duration-500">
+        <div className="p-4 bg-white shadow-xl rounded-md flex items-center mt-3 border border-[#ccc] focus-within:border-blue-400 group transition duration-500 w-11/12 lg:w-auto xl:w-auto">
           <input
             type="text"
-            className="outline-none h-full w-[500px] text-xl text-[#444]"
+            className="outline-none h-full w-full lg:w-[500px] xl:w-[500px] text-xl text-[#444]"
             value={URL}
             onChange={(e) => setURL(e.target.value)}
             onKeyDown={(e) => {
@@ -215,7 +220,7 @@ export default function Home() {
             <p className="text-[#666] mb-3">
               Here are the URLs you shortened before.
             </p>
-            <table className="table-auto !p-3 border-separate border border-[#ccc] bg-white !rounded-md shadow-xl m-2 w-[700px]">
+            <table className="table-auto p-2 lg:p-3 xl:p-3 border-separate border border-[#ccc] bg-white !rounded-md shadow-xl m-2 w-11/12 lg:w-[700px] xl:w-[700px]">
               <thead>
                 <tr>
                   <th className="text-2xl">No.</th>

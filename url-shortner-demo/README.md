@@ -1,29 +1,67 @@
-# Next.js + Tailwind CSS Example
+# URL Shortner Demo
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Simple and fast tool to create a shortened URL making it easy to remember and share.
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+![Demo](./public/demo.png)
 
-## Preview
+## ⚡️ Features
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+- Simple and Fast URL shortening Service
+- Unlimited Requests
+- Fully Responsive
+- Neat UI
+- Manage History
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+## 🛠️ Installation Steps
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+1. Clone the repository
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+git clone https://github.com/RapidAPI/DevRel-Examples-External.git
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+2. Change the working directory
+
+```bash
+cd DevRel-Examples-External/url-shortner-demo
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Create `.env` file in root and add your variables
+
+```bash
+NEXT_PUBLIC_RAPID_API_KEY=YOUR_RAPID_API_KEY
+```
+
+5. Run the app
+
+```bash
+npm run dev
+```
+
+You are all set! Open [localhost:3000](http://localhost:3000/) to see the app.
+
+## 🦄 Deploy
+
+<a href="https://vercel.com/new/project?template=https://github.com/RapidAPI/DevRel-Examples-External/url-shortner-demo/">
+<img src="https://vercel.com/button" height="37.5px" />
+</a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/RapidAPI/DevRel-Examples-External/url-shortner-demo/">
+<img src="https://www.netlify.com/img/deploy/button.svg" height="37.5px" />
+</a>
+<a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/RapidAPI/DevRel-Examples-External/url-shortner-demo/">
+<img src="https://camo.githubusercontent.com/df21703b4229f8d44f76c2d56073657a4ab450ca4566ba5d24d05bf528c298f8/68747470733a2f2f7777772e6465706c6f79746f646f2e636f6d2f646f2d62746e2d626c75652e737667" height="37.5px" />
+</a>
+
+## 👨‍💻 Author
+
+### 👤 Savio Martin
+
+- Twitter: [@SavioMartin7](https://twitter.com/SavioMartin7)
+- Github: [@saviomartin](https://github.com/saviomartin)
+- Hashnode: [@saviomartin](https://hashnode.com/@saviomartin)
