@@ -6,12 +6,17 @@ export default function Home() {
 	const [temp, setTemp] = useState(null);
 	const [minTemp, setMinTemp] = useState('');
 	const [maxTemp, setMaxTemp] = useState('');
+	const [err, setErr] = useState(false);
 
 	/**
 	 *
 	 * fetch weather information of the given city
 	 */
 	const getWeather = () => {
+		// resetting states
+		setErr(false);
+		setTemp(null);
+
 		const options = {
 			method: 'GET',
 			url: 'https://community-open-weather-map.p.rapidapi.com/weather',
@@ -37,6 +42,7 @@ export default function Home() {
 			})
 			.catch(function (error) {
 				console.error(error);
+				setErr(true);
 			});
 	};
 
@@ -75,6 +81,11 @@ export default function Home() {
 						<p className="w-64 sm:w-41">Temperature Max:</p>
 						<p>{maxTemp}° C</p>
 					</div>
+				</div>
+			)}
+			{err && (
+				<div className="mt-10 bg-red-200 px-12 py-4 rounded font-raleway text-xl font-semibold text-gray-700 sm:text-base sm:px-8">
+					<p>Couldn't fetch weather results.</p>
 				</div>
 			)}
 		</div>
