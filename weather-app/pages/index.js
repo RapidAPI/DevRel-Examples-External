@@ -43,15 +43,15 @@ export default function Home() {
 	return (
 		<div className="flex justify-center items-center h-screen flex-col">
 			<div>
-				<h2 className="font-raleway text-5xl font-extrabold mb-10">
+				<h2 className="font-raleway text-5xl font-extrabold mb-10 sm:text-4xl">
 					Weather App
 				</h2>
 			</div>
-			<div className="flex">
+			<div className="flex sm:flex-col">
 				<input
 					type="text"
 					placeholder="City..."
-					className="outline-indigo mr-6 rounded-sm pl-4 w-64 font-raleway"
+					className="outline-indigo mr-6 rounded-sm pl-4 w-64 font-raleway sm:mr-0 sm:mb-4 sm:py-1"
 					onChange={e => setCity(e.target.value)}
 				/>
 				<button
@@ -62,17 +62,17 @@ export default function Home() {
 				</button>
 			</div>
 			{temp && (
-				<div className="mt-10 flex flex-col justify-start bg-indigo-200 px-12 py-4 rounded font-raleway text-xl font-semibold text-gray-700">
+				<div className="mt-10 flex flex-col justify-start bg-indigo-200 px-12 py-4 rounded font-raleway text-xl font-semibold text-gray-700 sm:text-base sm:px-8">
 					<div className="flex mb-4">
-						<p className="w-64">Temperature:</p>
+						<p className="w-64 sm:w-41">Temperature:</p>
 						<p>{temp} ° C</p>
 					</div>
-					<div className="flex mb-4">
+					<div className="flex mb-4 sm:w-41">
 						<p className="w-64">Temperature Min:</p>
 						<p>{minTemp}° C</p>
 					</div>
 					<div className="flex">
-						<p className="w-64">Temperature Max:</p>
+						<p className="w-64 sm:w-41">Temperature Max:</p>
 						<p>{maxTemp}° C</p>
 					</div>
 				</div>
