@@ -4,6 +4,8 @@
 	<h2>Weather App</h2>
 </div>
 
+>[Live Preview](https://weather-app-dev-rel-rapidapi.vercel.app/)
+
 ### ⚡️ Features
 
 - Displays Temperature
