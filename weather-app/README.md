@@ -4,7 +4,7 @@
 	<h2>Weather App</h2>
 </div>
 
->[Live Preview](https://weather-app-dev-rel-rapidapi.vercel.app/)
+>[Live Preview](https://rapidapi-example-weather-app.vercel.app/)
 
 ### ⚡️ Features
 
