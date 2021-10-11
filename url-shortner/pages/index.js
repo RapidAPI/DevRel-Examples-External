@@ -16,7 +16,9 @@ import ConfettiGenerator from "confetti-js";
 import { toast, Toaster } from "react-hot-toast";
 
 export default function Home() {
-  const [URL, setURL] = useState("https://google.com/");
+  const [URL, setURL] = useState(
+    "https://stackoverflow.com/questions/3383429/setting-focus-on-an-html-input-box-on-page-load"
+  );
   const [isValidURL, setIsValidURL] = useState(false);
   const [shortenedURL, setShortenedURL] = useState("");
 
@@ -32,6 +34,10 @@ export default function Home() {
       setPastShortenedURLs(JSON.parse(window.localStorage.getItem("history")));
     } else {
       window.localStorage.setItem("history", JSON.stringify([]));
+    }
+
+    if (document.getElementById("urlInput")) {
+      document.getElementById("urlInput").focus();
     }
   }, []);
 
@@ -201,6 +207,7 @@ export default function Home() {
             type="text"
             className="outline-none h-full w-full lg:w-[500px] xl:w-[500px] text-xl text-[#444]"
             value={URL}
+            id="urlInput"
             onChange={(e) => setURL(e.target.value)}
             onKeyDown={(e) => {
               if (e.keyCode === 13) {
