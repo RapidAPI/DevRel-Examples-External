@@ -8,6 +8,8 @@ Go to [RapidAPI Hub](https://rapidapi.com/hub?utm_source=github.com%2FRapid_API&
 
 ## Contributing
 
+Note that you should add only the files that are necessary for the application to work properly. That means no separate configuration files for Prettier, ESLint, etc. unless it's necessary for your application to work.
+
 ### Commit messages
 
 Use the [Emoji Log](https://github.com/ahmadawais/Emoji-Log) convention for writing new commit messages.
