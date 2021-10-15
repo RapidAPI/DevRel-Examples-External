@@ -17,7 +17,7 @@ module.exports = {
       primary: "#FFFDFB",
       secondary: "#D6E3E4",
       danger: " #31CB53",
-      btnColor: " #F6FF81",
+      lightYellow: " #F6FF81",
     },
   },
   variants: {
