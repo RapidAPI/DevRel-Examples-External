@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Header from "./Header";
 import SEO from "./SEO";
 
@@ -7,6 +8,7 @@ const Layout = ({ children }) => {
       <SEO />
       <Header />
       {children}
+      <Footer />
     </div>
   );
 };
