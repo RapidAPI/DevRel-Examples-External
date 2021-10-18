@@ -8,11 +8,16 @@ export default function Home({ value }) {
       </h3>
       {value.map((news) => {
         return (
-          <Link href={news.url}>
-            <div className="flex items-center text-lg px-10 mb-10 font-light font-raleway h-32 w-3/6 rounded-sm border-2 border-danger text-lightYellow cursor-pointer transition duration-300 hover:border-primary hover:text-danger md:w-80 md:h-40">
-              <h3>{news.name}</h3>
-            </div>
-          </Link>
+          <div
+            className="flex items-center text-lg px-10 mb-10 font-light font-raleway h-32 w-3/6 rounded-sm border-2 border-danger text-lightYellow cursor-pointer transition duration-300 hover:border-primary hover:text-danger md:w-80 md:h-40"
+            key={value.indexOf(news)}
+          >
+            <Link href={news.url}>
+              <a>
+                <h3>{news.name}</h3>
+              </a>
+            </Link>
+          </div>
         );
       })}
     </div>
