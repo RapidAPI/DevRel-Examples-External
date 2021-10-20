@@ -13,8 +13,6 @@ export default async function handler(req, res) {
       },
     };
 
-    console.log();
-
     axios
       .request(options)
       .then(function (response) {
