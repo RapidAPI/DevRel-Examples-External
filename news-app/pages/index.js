@@ -1,4 +1,5 @@
 import Link from "next/link";
+import axios from "axios";
 
 export default function Home({ value }) {
   return (
@@ -25,20 +26,10 @@ export default function Home({ value }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(
-    "https://bing-news-search1.p.rapidapi.com/news?safeSearch=Off&textFormat=Raw",
-    {
-      method: "GET",
-      headers: {
-        "x-bingapis-sdk": "true",
-        "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
-        "x-rapidapi-key": process.env.NEXT_PUBLIC_BING_NEWS_API_KEY,
-      },
-    }
+  const res = await axios.get(
+    "https://rapidapi-example-news-app.vercel.app/api/news"
   );
-
-  const data = await res.json();
-  const { value } = data;
+  const { data: value } = res;
 
   if (!value) {
     return {
