@@ -68,7 +68,7 @@ export default function Home({ symbols }) {
           <div className="flex w-3/5 rounded border-primary text-primary my-6 md:w-full">
             <p className="font-raleway font-bold text-lg uppercase tracking-wider md:text-base">
               Converted Amount:{" "}
-              <span className="text-danger">{`${convertedAmount} ${convertFrom}`}</span>
+              <span className="text-danger">{`${convertedAmount} ${convertTo}`}</span>
             </p>
           </div>
         )}
