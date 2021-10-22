@@ -32,14 +32,14 @@ export default function Home({ symbols }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center">
       <h2 className="font-raleway font-bold text-6xl text-primary pt-20 pb-6 md:text-3xl">
         Currency <span className="text-danger">Conversion</span> App
       </h2>
       <h3 className="text-secondary text-2xl font-raleway font-bold uppercase tracking-wide mb-14 md:text-base md:px-4 md:text-center">
         Convert Different Concurrencies Quickly
       </h3>
-      <div className="flex flex-col justify-between  w-3/6 md:w-5/6">
+      <div className="flex flex-col justify-between w-3/6 md:w-5/6">
         <Input
           label="Convert from"
           dropdown={true}
@@ -74,7 +74,7 @@ export default function Home({ symbols }) {
         )}
       </div>
 
-      <div className="flex justify-center items-end h-32">
+      <div className="flex justify-center items-end h-52 md:h-44">
         <p className="text-primary pb-12 md:w-60 md:text-center">
           Made by RapidAPI DevRel Team –{" "}
           <a href="https://github.com/RapidAPI/DevRel-Examples-External">
