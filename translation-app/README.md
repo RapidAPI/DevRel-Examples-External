@@ -1,29 +1,56 @@
-# Next.js + Tailwind CSS Example
+# Translation App
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Translate text from English to French/Spanish/Russian/Hindi/Bengali/Arabic/Marathi/Italian/Dutch/Portuguese!
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+![Demo](./public/demo.gif)
 
-## Preview
+> [Live Preview](https://rapidapi-example-translation-app.vercel.app/)
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+## ⚡️ Features
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+- Translate text from English to French/Spanish/Russian/Hindi/Bengali/Arabic/Marathi/Italian/Dutch/ Portuguese
+- Neat UI
+- Option to copy translated text
 
-## Deploy your own
+## 🛠️ Installation Steps
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+1. Clone the repository
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+git clone https://github.com/RapidAPI/DevRel-Examples-External.git
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+2. Change the working directory
+
+```bash
+cd DevRel-Examples-External/translation-app
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Create `.env.local` file in root and add your variables
+
+```bash
+NEXT_PUBLIC_GOOGLE_TRANSLATE_API_KEY=YOUR_RAPID_API_KEY
+```
+
+5. Run the app
+
+```bash
+npm run dev
+```
+
+You are all set! Open [localhost:3000](http://localhost:3000/) to see the app.
+
+## 👨‍💻 Author
+
+### 🧍 Prashoon Bhattacharjee
+
+- Website: https://prashoonb.tech
+- Twitter: [@prashoonb](https://twitter.com/prashoonb)
+- Github: [@Prashoon123](https://github.com/Prashoon123)
+- LinkedIn: [@prashoon-bhattacharjee](https://www.linkedin.com/in/prashoon-bhattacharjee/
