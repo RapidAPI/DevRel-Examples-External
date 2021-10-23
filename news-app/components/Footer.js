@@ -4,7 +4,7 @@ const Footer = () => {
       <p className="text-primary pb-12 md:w-60 md:text-center">
         Made by RapidAPI DevRel Team –{" "}
         <a
-          href="https://github.com/msaaddev/DevRel-Examples-External"
+          href="https://github.com/RapidAPI/DevRel-Examples-External"
           className="text-lightYellow"
         >
           See Examples Like this
