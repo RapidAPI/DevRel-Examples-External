@@ -16,7 +16,7 @@ export default function Home({ symbols }) {
   const convertCurrency = () => {
     const options = {
       method: "GET",
-      url: "https://rapidapi-example-currency-converter.vercel.app/api/convert",
+      url: "https://rapidapi-example-currency-conversion.vercel.app/api/convert",
       params: { convertFrom, convertTo, amount },
     };
 
@@ -88,7 +88,7 @@ export default function Home({ symbols }) {
 
 export async function getServerSideProps() {
   const res = await axios.get(
-    "https://rapidapi-example-currency-converter.vercel.app/api/symbol"
+    "https://rapidapi-example-currency-conversion.vercel.app/api/symbol"
   );
   const { data } = res;
   const { symbols } = data;
