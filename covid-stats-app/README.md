@@ -4,6 +4,8 @@
 	<h2>COVID Stats App</h2>
 </div>
 
+> [Live Preview](https://rapidapi-example-covid-stats.vercel.app/)
+
 ### ⚡️ Features
 
 - Displays up-to-date stats of any country of your choice
