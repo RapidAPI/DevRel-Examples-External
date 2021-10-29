@@ -1,6 +1,6 @@
 # URL Shortner Demo
 
-Simple and fast tool to create a shortened URL making it easy to remember and share.
+Simple and fast tool to create a shortened URL making it easy to remember and share. Built using [URL Shortner API](https://rapidapi.com/BigLobster/api/url-shortener-service/?utm_source=SAVIO-MARTIN&utm_medium=DevRel&utm_campaign=DevRel). Go to [Rapid API Hub](https://rapidapi.com/hub?utm_source=SAVIO-MARTIN&utm_medium=DevRel&utm_campaign=DevRel) for access to 35k+ APIs.
 
 ![Demo](./public/demo.png)
 
