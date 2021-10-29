@@ -10,6 +10,7 @@ import { toast, Toaster } from "react-hot-toast";
 // all the languages supported by the app
 import languages from "../data/languages.json";
 import TextBox from "../components/TextBox";
+import Button from "../components/Button";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -121,11 +122,11 @@ export default function Home() {
           </div>
         </div>
 
-        <button onClick={translate} className="bg-gray-200 p-4">
+        <Button className="bg-gray-200 p-4" onClick={translate}>
           Translate to {translateTo}
-        </button>
+        </Button>
 
-        <button
+        <Button
           onClick={copyToClipboard}
           className="bg-gray-200 p-4 mt-4 flex flex-row items-center"
           disabled={!translatedText}
@@ -146,7 +147,7 @@ export default function Home() {
           </svg>
 
           <p className="ml-2">Copy translated text to clipboard</p>
-        </button>
+        </Button>
       </main>
 
       <Toaster position="top-center" reverseOrder={false} />
