@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+}
+
+@layer components {
+  .header {
+    @apply mt-2;
+  }
+  .main {
+    @apply flex flex-col items-center justify-center w-full flex-1 px-20 text-center;
+  }
+}
