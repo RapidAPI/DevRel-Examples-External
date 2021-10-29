@@ -14,3 +14,12 @@ body {
   font-family: "Poppins", sans-serif;
   padding: 0;
 }
+
+@layer components {
+  .header {
+    @apply mt-2;
+  }
+  .main {
+    @apply flex flex-col items-center justify-center w-full flex-1 px-20 text-center;
+  }
+}

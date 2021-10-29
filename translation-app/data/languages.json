@@ -1,0 +1,12 @@
+[
+  { "name": "French", "code": "fr" },
+  { "name": "Spanish", "code": "es" },
+  { "name": "Russian", "code": "ru" },
+  { "name": "Hindi", "code": "hi" },
+  { "name": "Bengali", "code": "bn" },
+  { "name": "Arabic", "code": "ar" },
+  { "name": "Marathi", "code": "mr" },
+  { "name": "Italian", "code": "it" },
+  { "name": "Dutch", "code": "nl" },
+  { "name": "Portuguese", "code": "pt" }
+]

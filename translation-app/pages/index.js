@@ -1,6 +1,3 @@
-// head for seo
-import Head from "next/head";
-
 // React useState hook for maintaining local state
 import { useState } from "react";
 
@@ -10,44 +7,28 @@ import axios from "axios";
 // react hot toast
 import { toast, Toaster } from "react-hot-toast";
 
+// all the languages supported by the app
+import languages from "../data/languages.json";
+import TextBox from "../components/TextBox";
+
 export default function Home() {
   const [text, setText] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("fr");
   const [translateTo, setTranslateTo] = useState("French");
   const [translatedText, setTranslatedText] = useState("");
 
-  // all the languages supported by the app
-  const languages = [
-    { name: "French", code: "fr" },
-    { name: "Spanish", code: "es" },
-    { name: "Russian", code: "ru" },
-    { name: "Hindi", code: "hi" },
-    { name: "Bengali", code: "bn" },
-    { name: "Arabic", code: "ar" },
-    { name: "Marathi", code: "mr" },
-    { name: "Italian", code: "it" },
-    { name: "Dutch", code: "nl" },
-    { name: "Portuguese", code: "pt" },
-  ];
-
   // function that translates the text
-  const translate = () => {
+  const translate = async () => {
     if (!text || text[0] === " ") return toast.error("Please enter some text!");
 
-    const options = {
-      method: "POST",
-      url: "https://deep-translate1.p.rapidapi.com/language/translate/v2",
-      headers: {
-        "x-rapidapi-host": "deep-translate1.p.rapidapi.com",
-        "x-rapidapi-key": process.env.NEXT_PUBLIC_GOOGLE_TRANSLATE_API_KEY,
-      },
-      data: { q: text, target: selectedLanguage, source: "en" },
-    };
+    const urlEncodedText = encodeURIComponent(text);
 
-    axios
-      .request(options)
+    await axios
+      .get(
+        `${process.env.NEXT_PUBLIC_API_URL}?q=${urlEncodedText}&target=${selectedLanguage}`
+      )
       .then(function (response) {
-        setTranslatedText(response?.data?.data?.translations?.translatedText);
+        setTranslatedText(response.data);
 
         toast.success("Successfully translated the text!");
       })
@@ -67,36 +48,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Translation App</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="This app will help you translate text from English to French/Spanish/Russian/Hindi/Bengali/Arabic/Marathi/Italian/Dutch/Portuguese!"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@prashoonb" />
-        <meta name="twitter:creator" content="@prashoonb" />
-        <meta property="og:title" content="Translation App" />
-        <meta
-          property="og:description"
-          content="This app will help you translate text from English to French/Spanish/Russian/Hindi/Bengali/Arabic/Marathi/Italian/Dutch/Portuguese!"
-        />
-        <meta property="og:url" content="https://rapidapi-example-translation-app.vercel.app/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/favicon.ico" />
-        <meta property="og:image:alt" content="Translation App" />
-        <meta property="og:image:width" content="48" />
-        <meta property="og:image:height" content="48" />
-        <meta property="og:site_name" content="Translation App" />
-        <link rel="canonical" href="https://rapidapi-example-translation-app.vercel.app/" />
-      </Head>
-
-      <header className="mt-2">
+      <header className="header">
         <h1 className="text-6xl font-bold">📄 Translation App</h1>
       </header>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+      <main className="main">
         <div className="flex flex-row items-center">
           <div className="flex flex-col items-center">
             <select className="outline-none invisible">
@@ -107,11 +63,7 @@ export default function Home() {
               ))}
             </select>
 
-            <textarea
-              className="m-10 outline-none border-2 p-4 h-[200px] w-[400px]"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-            ></textarea>
+            <TextBox value={text} setValue={setText} />
           </div>
 
           <div className="flex flex-col items-center">
@@ -165,11 +117,7 @@ export default function Home() {
               ))}
             </select>
 
-            <textarea
-              className="m-10 outline-none border-2 p-4 h-[200px] w-[400px]"
-              readOnly={true}
-              value={translatedText}
-            ></textarea>
+            <TextBox value={translatedText} readOnly={true} />
           </div>
         </div>
 
