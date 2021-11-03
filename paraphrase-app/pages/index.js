@@ -1,4 +1,28 @@
+import { useState } from "react";
+import axios from "axios";
+
 export default function Home() {
+  const [content, setContent] = useState(null);
+  const [paraphrased, setParaphrased] = useState("");
+
+  /**
+   *
+   *
+   * Fetch the paraphrased content
+   */
+  const fetchParaPhrasedText = async () => {
+    try {
+      const res = await axios.get(`http://localhost:3000/api/paraphrase`, {
+        params: { content },
+      });
+      const { data } = res;
+      setParaphrased(data.rewrite);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="flex flex-col items-center relative min-h-screen">
       <h2 className="font-raleway font-bold text-6xl text-primary pt-20 pb-6 md:text-3xl">
@@ -12,9 +36,13 @@ export default function Home() {
           type="text"
           className="border border-primary outline-none w-2/5 px-4 py-2 rounded-sm font-raleway md:w-full"
           placeholder="Write/paste any content..."
+          onChange={(e) => setContent(e.target.value)}
         />
         <div className="flex items-center">
-          <button className="h-1/6 outline-none border border-secondary font-bold font-raleway mx-12 px-12 rounded-sm bg-secondary text-primary transition duration-300 hover:bg-bc hover:text-black md:h-16 md:my-12">
+          <button
+            className="h-1/6 outline-none border border-secondary font-bold font-raleway mx-12 px-12 rounded-sm bg-secondary text-primary transition duration-300 hover:bg-bc hover:text-black md:h-16 md:my-12"
+            onClick={fetchParaPhrasedText}
+          >
             Paraphrase
           </button>
         </div>
@@ -22,7 +50,7 @@ export default function Home() {
           type="text"
           className="border border-primary outline-none w-2/5  px-4 py-2 rounded-sm font-raleway md:w-full"
           placeholder="Paraphrase content"
-          value=""
+          value={paraphrased}
         />
       </div>
       <div className="absolute bottom-0 flex justify-center items-end h-52 md:h-44">
