@@ -14,7 +14,7 @@ export default function Home() {
    */
   const fetchMovieInfo = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/movie`, {
+      const res = await axios.get(`/api/movie`, {
         params: { movieName },
       });
       const { data } = res;
