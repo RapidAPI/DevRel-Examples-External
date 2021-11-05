@@ -12,6 +12,7 @@ export default function Home() {
    */
   const fetchParaPhrasedText = async () => {
     try {
+      setParaphrased(`Generating paraphrased article...`);
       const res = await axios.get(`/api/paraphrase`, {
         params: { content },
       });
@@ -19,6 +20,7 @@ export default function Home() {
       setParaphrased(data.rewrite);
       console.log(data);
     } catch (err) {
+      setParaphrased(`Couldn't generate paraphrased content.`);
       console.log(err);
     }
   };
@@ -49,7 +51,7 @@ export default function Home() {
         <textarea
           type="text"
           className="border border-primary outline-none w-2/5  px-4 py-2 rounded-sm font-raleway md:w-full"
-          placeholder="Paraphrase content"
+          placeholder="Paraphrased content"
           value={paraphrased}
         />
       </div>
