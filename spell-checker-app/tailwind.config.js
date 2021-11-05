@@ -15,6 +15,7 @@ module.exports = {
       secondary: "#084653",
       active: "#EEBA4C",
       lightPurple: "#D4C2FA",
+      white: "#FFFFFF",
     },
   },
   variants: {
