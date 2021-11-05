@@ -9,7 +9,7 @@ export default function Home() {
 
   const getQrcode = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/qrcode/", {
+      const res = await axios.get("api/qrcode/", {
         params: { input },
       });
 
