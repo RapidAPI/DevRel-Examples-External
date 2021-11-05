@@ -34,7 +34,7 @@ npm install
 4. Create `.env.local` file in root and add your variables
 
 ```bash
-NEXT_PUBLIC_BING_NEWS_API_KEY=YOUR_RAPID_API_KEY
+NEXT_PUBLIC_RAPIDAPI_KEY=YOUR_RAPID_API_KEY
 ```
 
 5. Run the app
