@@ -4,7 +4,7 @@
 	<h2>QR Code Generator App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-qrcode-generator.vercel.app/)
+> [Live Preview](https://rapidapi-example-qrcode.vercel.app/)
 
 ### ⚡️ Features
 

@@ -35,7 +35,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="text-6xl font-bold text-primary mt-10">
+      <h1 className="text-6xl font-bold text-primary mt-20">
         QR Code <span className="text-active">Generator</span>
       </h1>
       <h2 className="text-active text-2xl mt-6">
@@ -57,14 +57,14 @@ export default function Home() {
         <div className="mt-10 bg-active">
           <SVG src={response} />
           <button
-            className="w-full text-primary px-2"
+            className="w-full text-primary text-base p-1"
             onClick={() => downloadQrcode()}
           >
             Download
           </button>
         </div>
       )}
-      <div className="absolute bottom-6">
+      <div className="absolute bottom-4">
         <p className="text-primary text-xs">
           Made by RapidAPI DevRel Team -{" "}
           <a href="https://github.com/RapidAPI/DevRel-Examples-External">
