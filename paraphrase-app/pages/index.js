@@ -12,7 +12,7 @@ export default function Home() {
    */
   const fetchParaPhrasedText = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/paraphrase`, {
+      const res = await axios.get(`/api/paraphrase`, {
         params: { content },
       });
       const { data } = res;
