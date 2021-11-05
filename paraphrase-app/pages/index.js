@@ -18,7 +18,6 @@ export default function Home() {
       });
       const { data } = res;
       setParaphrased(data.rewrite);
-      console.log(data);
     } catch (err) {
       setParaphrased(`Couldn't generate paraphrased content.`);
       console.log(err);
