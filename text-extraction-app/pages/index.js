@@ -41,7 +41,7 @@ export default function Home() {
             onChange={(e) => setUrl(e.target.value)}
           />
           <button
-            className="outline-none border border-active font-bold font-raleway ml-4 px-12 py-2 rounded-sm bg-active text-primary transition duration-300 hover:bg-bc hover:text-secondary hover:border-secondary md:h-16 md:my-12"
+            className="outline-none border border-active font-bold font-raleway ml-4 px-12 py-2 rounded-sm bg-active text-primary transition duration-300 hover:bg-bc hover:text-secondary hover:border-secondary md:h-16 md:my-12 md:ml-0"
             onClick={fetchExtractedContent}
           >
             Extract Text
@@ -51,7 +51,7 @@ export default function Home() {
         {extractedText && (
           <textarea
             type="text"
-            className="bg-lightGrey text-secondary border border-primary outline-none w-3/5 h-96 mt-12 px-4 py-2 rounded-sm font-raleway md:w-full"
+            className="bg-lightGrey text-secondary border border-primary outline-none w-3/5 h-96 mt-12 px-4 py-2 rounded-sm font-raleway md:w-5/6 md:mt-2 md: h-48"
             value={extractedText}
           />
         )}
