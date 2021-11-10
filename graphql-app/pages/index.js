@@ -20,15 +20,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col relative bg-background font-raleway items-center min-h-screen ">
-      <Head>
-        <title>RapidAPI Devrel Example - GraphQL App</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-
       <h1 className="text-6xl text-primary font-bold mt-10">
         Example GraphQl <span className="text-active">App</span>
       </h1>
