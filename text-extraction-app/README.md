@@ -4,7 +4,7 @@
 	<h2>Text Extraction App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-movie-details-app.vercel.app/)
+> [Live Preview](https://rapidapi-example-text-extraction-app.vercel.app/)
 
 ### ⚡️ Features
 
