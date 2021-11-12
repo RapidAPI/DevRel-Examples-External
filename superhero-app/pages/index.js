@@ -18,7 +18,6 @@ export default function Home() {
         params: { name },
       });
       const { data } = res;
-      console.log(data);
       setSuperheroInfo(data);
     } catch (err) {
       console.log(err);
