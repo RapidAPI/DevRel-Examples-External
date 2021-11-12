@@ -10,7 +10,8 @@ export default function Home() {
    *
    * Fetch word information
    */
-  const fetchInfo = async () => {
+  const fetchInfo = async (e) => {
+    e.preventDefault();
     try {
       const res = await axios.get(`/api/info`, {
         params: { word },
@@ -18,6 +19,7 @@ export default function Home() {
       const { data } = res;
       const { definition } = data;
 
+      // split the response string into an array using regex
       const newDefinition = definition.split(/1. |2. | 3. /);
       setWordInfo(newDefinition);
     } catch (err) {
@@ -34,8 +36,12 @@ export default function Home() {
         Check Meaning of any word
       </h3>
       <div className="flex flex-col justify-between items-center w-full md:items-center">
-        <div className="flex w-full justify-center md:flex-col md:w-5/6 ">
+        <form
+          onSubmit={(e) => fetchInfo(e)}
+          className="flex w-full justify-center md:flex-col md:w-5/6 "
+        >
           <input
+            autoFocus={true}
             type="text"
             className="border-none outline-none w-2/5 bg-primary px-4 py-2 rounded-sm font-raleway md:w-full"
             placeholder="Enter any word..."
@@ -47,7 +53,7 @@ export default function Home() {
           >
             Search
           </button>
-        </div>
+        </form>
         {wordInfo && (
           <div className="flex flex-col text-primary text-raleway mt-12 w-3/6 h-4/5  md:flex-col md:w-4/6 md:h-full md:mb-12">
             <table className="bg-white w-full text-primary mb-8 md:text-sm md:mx-2">
