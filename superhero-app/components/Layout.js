@@ -2,7 +2,7 @@ import SEO from "./SEO";
 
 const Layout = ({ children }) => {
   return (
-    <div className="bg-bc min-h-screen">
+    <div className="bg-background min-h-screen">
       <SEO />
       {children}
     </div>
