@@ -70,7 +70,9 @@ export default function Home({ value }) {
 }
 
 export async function getServerSideProps() {
-  const res = await axios.get("http://localhost:3000/api/time");
+  const res = await axios.get(
+    "https://rapidapi-example-time-app.vercel.app/api/time"
+  );
   const { data: value } = res;
 
   if (!value) {
