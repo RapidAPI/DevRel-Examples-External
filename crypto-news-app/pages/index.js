@@ -5,7 +5,7 @@ export default function Home() {
   const [page, setPage] = useState(1);
   const [response, setResponse] = useState(null);
 
-  const getSearchResults = async () => {
+  const getNews = async () => {
     try {
       const res = await axios.get("api/news/", {
         params: { page },
@@ -32,7 +32,7 @@ export default function Home() {
           {!response && (
             <button
               className="block w-full rounded-md px-5 py-3 bg-active text-base font-bold text-background focus:outline-none focus:ring-2 focus:ring-primary sm:px-10"
-              onClick={() => getSearchResults()}
+              onClick={() => getNews()}
             >
               Get Latest News
             </button>
@@ -71,7 +71,7 @@ export default function Home() {
             className="block text-active text-base font-bold"
             onClick={() => {
               setPage(page + 1);
-              getSearchResults();
+              getNews();
             }}
           >
             Load next page &rarr;
