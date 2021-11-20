@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     } else {
       var options = {
         method: "GET",
-        url: "https://world-time2.p.rapidapi.com/ip",
+        url: "https://world-time2.p.rapidapi.com/timezone/Africa/Abidjan",
         headers: {
           "x-rapidapi-host": "world-time2.p.rapidapi.com",
           "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,

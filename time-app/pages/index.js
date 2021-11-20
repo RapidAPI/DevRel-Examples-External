@@ -49,7 +49,7 @@ export default function Home({ value }) {
         <span className="text-danger">Time</span> App
       </h2>
       <h3 className="text-danger text-2xl font-raleway font-bold uppercase tracking-wide mb-12 md:text-base md:px-4 md:text-center">
-        Get Time-related information according to your area
+        Get Time-related information according to an area
       </h3>
       <div className="flex w-full justify-center md:flex-col md:w-5/6 ">
         <Timezone onChange={setTimezone} />
