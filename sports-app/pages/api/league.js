@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     params: { comp: req.query.leagueID },
     headers: {
       "x-rapidapi-host": "football-web-pages1.p.rapidapi.com",
-      "x-rapidapi-key": "3ca279c6c3msh74f8c7183d90cd8p1e42d5jsn07f3a9318ff2",
+      "x-rapidapi-key": NEXT_PUBLIC_RAPIDAPI_KEY,
     },
   };
 

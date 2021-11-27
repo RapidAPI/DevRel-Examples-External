@@ -1,5 +1,4 @@
 import axios from "axios";
-import Head from "next/head";
 import { useState } from "react";
 
 export default function Home() {
@@ -38,7 +37,7 @@ export default function Home() {
           Premier League
         </button>
         <button
-          class="block w-full rounded-md px-5 py-3 bg-primary text-base font-bold text-background focus:outline-none hover:bg-active sm:px-10"
+          className="block w-full rounded-md px-5 py-3 bg-primary text-base font-bold text-background focus:outline-none hover:bg-active sm:px-10"
           onClick={() => {
             getLeague("92");
           }}
@@ -46,7 +45,7 @@ export default function Home() {
           Bundesliga
         </button>
         <button
-          class="block w-full rounded-md px-5 py-3 bg-primary text-base font-bold text-background focus:outline-none hover:bg-active sm:px-10"
+          className="block w-full rounded-md px-5 py-3 bg-primary text-base font-bold text-background focus:outline-none hover:bg-active sm:px-10"
           onClick={() => {
             getLeague("94");
           }}
