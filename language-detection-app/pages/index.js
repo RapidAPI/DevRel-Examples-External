@@ -42,6 +42,7 @@ export default function Home({ value: lang }) {
           className="border border-primary outline-none w-2/5 px-4 py-2 rounded-sm font-raleway bg-bc text-primary md:w-full"
           placeholder="Write/paste any content..."
           onChange={(e) => setText(e.target.value)}
+          autoFocus={true}
         />
         <div className="flex items-center">
           <button
@@ -56,6 +57,7 @@ export default function Home({ value: lang }) {
           className="border border-primary outline-none w-2/5  px-4 py-2 rounded-sm font-raleway bg-bc text-primary md:w-full"
           placeholder="Text Language..."
           value={detectedLang}
+          readOnly={true}
         />
       </div>
       <div className="absolute bottom-0 flex justify-center items-end h-52 md:h-44">
