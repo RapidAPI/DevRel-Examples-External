@@ -1,13 +1,12 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [league, setLeague] = useState(null);
   const [leagueID, setLeagueID] = useState(null);
 
-  const getLeague = async (id) => {
+  const getLeague = async () => {
     try {
-      setLeagueID(id);
       const res = await axios.get("api/league/", {
         params: { leagueID },
       });
@@ -17,6 +16,10 @@ export default function Home() {
       console.error(error);
     }
   };
+
+  useEffect(() => {
+    getLeague();
+  }, [leagueID]);
 
   return (
     <div className="flex flex-col relative bg-background font-raleway items-center min-h-screen">
@@ -31,7 +34,7 @@ export default function Home() {
         <button
           class="block w-full rounded-md px-5 py-3 bg-primary text-base font-bold text-background focus:outline-none hover:bg-active sm:px-10"
           onClick={() => {
-            getLeague("1");
+            setLeagueID("1");
           }}
         >
           Premier League
@@ -39,7 +42,7 @@ export default function Home() {
         <button
           className="block w-full rounded-md px-5 py-3 bg-primary text-base font-bold text-background focus:outline-none hover:bg-active sm:px-10"
           onClick={() => {
-            getLeague("92");
+            setLeagueID("92");
           }}
         >
           Bundesliga
@@ -47,7 +50,7 @@ export default function Home() {
         <button
           className="block w-full rounded-md px-5 py-3 bg-primary text-base font-bold text-background focus:outline-none hover:bg-active sm:px-10"
           onClick={() => {
-            getLeague("94");
+            setLeagueID("94");
           }}
         >
           Spanish La Liga
