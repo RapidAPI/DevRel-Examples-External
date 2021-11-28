@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="flex flex-col relative bg-background font-raleway items-center min-h-screen">
       <h1 className="text-6xl text-primary font-bold mt-20">
-        Footbal Scores <span className="text-active">App</span>
+        Football Scores <span className="text-active">App</span>
       </h1>
       <h2 className="text-active text-2xl mt-6">
         Select a league to get its data.
