@@ -32,16 +32,16 @@ export default function Home({ data }) {
       <h3 className="text-lightGrey text-2xl font-raleway font-bold uppercase tracking-wide mb-12 md:text-base md:px-4 md:text-center">
         Look up COVID-19 Vaccination Stats Across Different Countries
       </h3>
-      <div className="flex justify-center items-center mb-8 w-5/6 md:items-center">
+      <div className="flex justify-center items-center mb-8 w-5/6 md:items-center md:flex-col">
         <Dropdown onChange={setCountryCode} />
         <button
-          className="outline-none border border-secondary font-bold font-raleway ml-4 px-12 py-2 rounded-sm bg-secondary text-bc transition duration-300 hover:bg-bc hover:text-black md:ml-0 md:mt-4"
+          className="outline-none border border-secondary font-bold font-raleway ml-4 px-12 py-2 rounded-sm bg-secondary text-bc transition duration-300 hover:bg-bc hover:text-black md:ml-0 md:mt-4 md:w-5/6"
           onClick={fetchInfo}
         >
           Search
         </button>
       </div>
-      <div className="flex flex-col text-raleway mt-6 w-3/6 h-4/5  md:flex-col md:w-4/6 md:h-full md:mb-12">
+      <div className="flex flex-col text-raleway mt-6 w-3/6 h-4/5 md:w-5/6 md:h-full md:mb-12">
         <table className="bg-white w-full text-secondary text-lg mb-8 md:text-sm md:mx-2">
           <thead className="font-raleway uppercase tracking-wide">
             <tr>

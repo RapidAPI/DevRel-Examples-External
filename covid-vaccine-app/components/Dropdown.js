@@ -504,11 +504,11 @@ const Dropdown = ({ onChange }) => {
   ];
 
   return (
-    <div className="flex flex-col  w-3/6">
+    <div className="flex flex-col w-3/6 md:w-5/6">
       <select
         name="countries"
         onChange={(e) => onChange(e.target.value)}
-        className="flex justify-center bg-danger text-xl font-medium md:flex-col md:w-5/6 px-4 py-2 outline-none rounded"
+        className="flex justify-center bg-danger text-xl font-medium md:flex-col px-4 py-2 outline-none rounded"
       >
         {iso.map((code) => {
           return (
