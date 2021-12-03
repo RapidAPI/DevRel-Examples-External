@@ -54,7 +54,7 @@ export default function Home() {
               src={superheroInfo.images.lg}
               width={220}
               height={300}
-              alt="{movieInfo.title}"
+              alt={movieInfo.title}
             />
             <div className="flex flex-col justify-center ml-8 md:mt-6 w-3/6">
               <div className="flex justify-between w-full md:flex-col">
