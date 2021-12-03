@@ -21,7 +21,7 @@ git clone https://github.com/RapidAPI/DevRel-Examples-External.git
 2. Change the working directory
 
 ```bash
-cd DevRel-Examples-External/crypto-news-app
+cd DevRel-Examples-External/sports-app
 ```
 
 3. Install dependencies
