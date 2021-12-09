@@ -1,82 +1,103 @@
-import Head from 'next/head'
+import { useState } from "react";
+import axios from "axios";
 
-export default function Home() {
+export default function Home({ data }) {
+  const [year, setYear] = useState(2021);
+  const [holidays, setHolidays] = useState(data);
+
+  /**
+   *
+   *
+   * Fetch US public holidays for a particular year
+   */
+  const fetchHolidays = async () => {
+    try {
+      const res = await axios.get(`/api/holiday`, {
+        params: { year },
+      });
+
+      setHolidays(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="flex flex-col items-center relative min-h-screen">
+      <h2 className="font-raleway font-bold text-6xl text-primary pt-20 pb-6 md:text-3xl">
+        Public <span className="text-active">Holiday</span> App
+      </h2>
+      <h3 className="text-primary text-2xl font-raleway font-bold uppercase tracking-wide mb-12 md:text-base md:px-4 md:text-center">
+        Take a look at different public holidays of USA
+      </h3>
+      <div className="flex w-full justify-center md:flex-col md:w-5/6">
+        <select
+          name="countries"
+          autoFocus={true}
+          className="outline-none w-2/5 bg-secondary px-4 py-2 rounded-sm font-raleway md:w-full"
+          onChange={(e) => setYear(e.target.value)}
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+          <option value="2025">2025</option>
+          <option value="2026">2026</option>
+          <option value="2027">2027</option>
+          <option value="2028">2028</option>
+          <option value="2029">2029</option>
+          <option value="2030">2030</option>
+        </select>
+        <button
+          className="outline-none border border-secondary font-bold font-raleway ml-4 px-12 py-2 rounded-sm bg-secondary text-primary transition duration-300 hover:bg-light hover:text-black md:ml-0 md:mt-4"
+          onClick={fetchHolidays}
+        >
+          Search
+        </button>
+      </div>
+      <div className="flex justify-around flex-wrap text-primary font-raleway mt-12 w-4/6 h-4/5  md:flex-col md:w-4/6 md:h-full md:mb-12">
+        {holidays.map((holiday) => (
+          <div
+            className="flex items-center flex-col bg-light w-56 h-40 rounded-md mb-12"
+            key={holidays.indexOf(holiday)}
+          >
+            <div className="bg-primary text-background w-full h-24 flex justify-center items-center rounded-md">
+              <p>{holiday.localName}</p>
+            </div>
+            <div className="flex justify-center items-center h-16">
+              <p>{holiday.date}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="flex flex-col mt-10 justify-center">
+        <p className="block mb-10 text-center text-secondary text-xs">
+          Made by RapidAPI DevRel Team -{" "}
+          <a
+            className="hover:text-active"
+            href="https://github.com/RapidAPI/DevRel-Examples-External"
+          >
+            See more examples like this
+          </a>
+        </p>
+      </div>
     </div>
-  )
+  );
+}
+
+export async function getServerSideProps() {
+  const res = await axios.get("http://localhost:3000/api/holiday");
+  const { data } = res;
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      data,
+    },
+  };
 }
