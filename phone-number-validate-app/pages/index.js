@@ -76,10 +76,14 @@ export default function Home() {
                   <td className="border px-4 py-4">Country Code</td>
                   <td className="border px-4 py-4">{res["country-code3"]}</td>
                 </tr>
-                <tr>
-                  <td className="border px-4 py-4">Prefix Network</td>
-                  <td className="border px-4 py-4">{res["prefix-network"]}</td>
-                </tr>
+                {res["prefix-network"] && (
+                  <tr>
+                    <td className="border px-4 py-4">Prefix Network</td>
+                    <td className="border px-4 py-4">
+                      {res["prefix-network"]}
+                    </td>
+                  </tr>
+                )}
                 <tr>
                   <td className="border px-4 py-4">International Number</td>
                   <td className="border px-4 py-4">
