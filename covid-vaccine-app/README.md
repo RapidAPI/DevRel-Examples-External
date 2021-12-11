@@ -1,14 +1,15 @@
 ![cover](assets/cover.png)
 
 <div align="center">
-	<h2>Sports App</h2>
+	<h2>Covid Vaccine Stats App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-sports-app.vercel.app/)
+> [Live Preview](https://rapidapi-covid-vaccine-stats-app.vercel.app/)
 
 ### ⚡️ Features
 
-- Show Football stats using the Football Web Pages API.
+- Show vaccine statistics across multiple countries
+- Mobile friendly
 
 ### 🛠️ Installation Steps
 
@@ -21,7 +22,7 @@ git clone https://github.com/RapidAPI/DevRel-Examples-External.git
 2. Change the working directory
 
 ```bash
-cd DevRel-Examples-External/sports-app
+cd DevRel-Examples-External/covid-vaccine-app
 ```
 
 3. Install dependencies
@@ -30,7 +31,7 @@ cd DevRel-Examples-External/sports-app
 npm install
 ```
 
-4. Create `.env.local` file in root and add your RapidAPI key.
+4. Create `.env.local` file in root and add your variables
 
 ```bash
 NEXT_PUBLIC_RAPIDAPI_KEY=YOUR_RAPID_API_KEY

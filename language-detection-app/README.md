@@ -1,14 +1,15 @@
 ![cover](assets/cover.png)
 
 <div align="center">
-	<h2>Sports App</h2>
+	<h2>Language Detection App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-sports-app.vercel.app/)
+> [Live Preview](https://rapidapi-example-language-detection-app.vercel.app/)
 
 ### ⚡️ Features
 
-- Show Football stats using the Football Web Pages API.
+- Detects the language of your text
+- Mobile Friendly
 
 ### 🛠️ Installation Steps
 
@@ -21,7 +22,7 @@ git clone https://github.com/RapidAPI/DevRel-Examples-External.git
 2. Change the working directory
 
 ```bash
-cd DevRel-Examples-External/sports-app
+cd DevRel-Examples-External/language-detection-app
 ```
 
 3. Install dependencies
