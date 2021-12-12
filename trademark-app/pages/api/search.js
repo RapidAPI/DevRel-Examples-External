@@ -3,10 +3,9 @@ import axios from "axios";
 export default async function handler(req, res) {
   const options = {
     method: "GET",
-    url: "https://hotels4.p.rapidapi.com/locations/v2/search",
-    params: { query: req.query.searchCity, locale: "en_US", currency: "USD" },
+    url: `https://uspto-trademark.p.rapidapi.com/v1/trademarkSearch/${req.query.keyword}/active`,
     headers: {
-      "x-rapidapi-host": "hotels4.p.rapidapi.com",
+      "x-rapidapi-host": "uspto-trademark.p.rapidapi.com",
       "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
     },
   };

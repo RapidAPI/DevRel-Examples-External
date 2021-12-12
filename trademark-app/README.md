@@ -1,15 +1,15 @@
 ![cover](assets/cover.png)
 
 <div align="center">
-	<h2>Hotel App</h2>
+	<h2>Trademark App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-hotel-app.vercel.app/)
+> [Live Preview](https://rapidapi-example-trademark-app.vercel.app/)
 
 ### ⚡️ Features
 
-- Find hotels in a specigied city.
-- Show details of available hotels.
+- Search trademarks.
+- Check availibility of a trademark keyword.
 
 ### 🛠️ Installation Steps
 
@@ -22,7 +22,7 @@ git clone https://github.com/RapidAPI/DevRel-Examples-External.git
 2. Change the working directory
 
 ```bash
-cd DevRel-Examples-External/hotel-app
+cd DevRel-Examples-External/trademark-app
 ```
 
 3. Install dependencies
