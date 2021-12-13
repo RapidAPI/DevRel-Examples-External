@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 export default function Home({ data }) {
-  const [year, setYear] = useState(2021);
+  const [year, setYear] = useState();
   const [holidays, setHolidays] = useState(data);
 
   /**
@@ -37,16 +37,11 @@ export default function Home({ data }) {
           className="outline-none w-2/5 bg-secondary px-4 py-2 rounded-sm font-raleway md:w-full"
           onChange={(e) => setYear(e.target.value)}
         >
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-          <option value="2023">2023</option>
-          <option value="2024">2024</option>
-          <option value="2025">2025</option>
-          <option value="2026">2026</option>
-          <option value="2027">2027</option>
-          <option value="2028">2028</option>
-          <option value="2029">2029</option>
-          <option value="2030">2030</option>
+          {[2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030].map(
+            (year) => {
+              return <option value={year}>{year}</option>;
+            }
+          )}
         </select>
         <button
           className="outline-none border border-secondary font-bold font-raleway ml-4 px-12 py-2 rounded-sm bg-secondary text-primary transition duration-300 hover:bg-light hover:text-black md:ml-0 md:mt-4"
