@@ -50,7 +50,9 @@ export default function Home({ data }) {
       setAllQuotes(data);
       setQuote(data[0]);
       setIndex(0);
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
