@@ -31,7 +31,14 @@ export default function Home() {
         Check availability and information of any domain.
       </h2>
 
-      <div className="sm:mx-auto mt-20 justify-center sm:w-full sm:flex">
+      <form
+        className="sm:mx-auto mt-20 justify-center sm:w-full sm:flex"
+        onSubmit={(e) => {
+          getDomainInfo();
+          e.preventDefault();
+          e.stopPropagation();
+        }}
+      >
         <input
           type="text"
           className="block w-1/3 rounded-sm px-5 py-3 text-base text-background font-semibold focus:outline-none focus:ring-2 focus:ring-active"
@@ -46,12 +53,12 @@ export default function Home() {
         <div className="mt-4 sm:mt-0 sm:ml-3">
           <button
             className="block w-full rounded-sm px-5 py-3 bg-active text-base text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary sm:px-10"
-            onClick={() => getDomainInfo()}
+            type="submit"
           >
             {loading ? <>Loading..</> : <>Search</>}
           </button>
         </div>
-      </div>
+      </form>
       {errorInfo && (
         <div className="mt-10 max-w-3xl w-full">
           <h3 className="text-danger text-center text-xl">
