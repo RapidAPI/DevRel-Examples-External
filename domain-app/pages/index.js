@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function Home() {
   const [keyword, setKeyword] = useState(null);
   const [response, setResponse] = useState(null);
+  const [errorInfo, setErrorInfo] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const getDomainInfo = async () => {
@@ -16,7 +17,8 @@ export default function Home() {
       setLoading(false);
       setResponse(data);
     } catch (error) {
-      console.log(error);
+      setLoading(false);
+      setErrorInfo(error.response.data);
     }
   };
 
@@ -37,6 +39,7 @@ export default function Home() {
           onChange={(e) => {
             setKeyword(e.target.value);
             setResponse(null);
+            setErrorInfo(null);
           }}
         />
 
@@ -49,6 +52,13 @@ export default function Home() {
           </button>
         </div>
       </div>
+      {errorInfo && (
+        <div className="mt-10 max-w-3xl w-full">
+          <h3 className="text-danger text-center text-xl">
+            Error: {errorInfo}
+          </h3>
+        </div>
+      )}
       {response && (
         <div className="mt-10 max-w-3xl w-full">
           <h3 className="text-primary text-center text-xl">

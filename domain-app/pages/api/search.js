@@ -17,5 +17,6 @@ export default async function handler(req, res) {
     })
     .catch(function (error) {
       console.error(error);
+      res.status(500).json(error.response.data.payload);
     });
 }
