@@ -1,6 +1,8 @@
 import { useState } from "react";
+import axios from "axios";
 
-export default function Home() {
+export default function Home({ data }) {
+  const [res, setRes] = useState(data);
   const [selectedSign, setSelectedSign] = useState("");
   const signs = [
     "Aries",
@@ -16,6 +18,20 @@ export default function Home() {
     "Aquarius",
     "Pisces",
   ];
+
+  /**
+   *
+   *
+   * Fetch horoscope
+   */
+  const fetchHoroscope = async () => {
+    try {
+      const res = await axios.post("/api/horoscope", { sign: selectedSign });
+      setRes(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className="flex flex-col items-center relative min-h-screen">
@@ -38,11 +54,51 @@ export default function Home() {
             </option>
           ))}
         </select>
+        <button
+          className="outline-none border border-danger font-bold font-raleway ml-4 px-12 py-2 rounded-sm bg-danger text-primary transition duration-300 hover:bg-background hover:text-black md:ml-0 md:mt-4"
+          onClick={fetchHoroscope}
+        >
+          Search
+        </button>
       </div>
-      <div className="flex flex-col mt-4 w-3/6 h-4/5 md:flex-col md:w-4/6 md:h-full md:mb-12">
-        <p className="my-12 border border-secondary text-secondary font-raleway px-4 py-8 tracking-wide leading-8">
-          ""
+      <div className="flex flex-col mt-16 w-3/6 h-4/5 md:flex-col md:w-5/6 md:h-full md:mb-12 md:items-center">
+        <p className="border border-secondary border-b-0 text-secondary font-raleway px-4 py-8 tracking-wide leading-8">
+          {res.description}
         </p>
+        <table className="w-full text-secondary mb-8 md:text-sm md:mx-2">
+          <tbody>
+            <tr>
+              <td className="border border-secondary px-4 py-4 text-active">
+                Color
+              </td>
+              <td className="border px-4 py-4">{res.color}</td>
+            </tr>
+            <tr>
+              <td className="border border-secondary px-4 py-4 text-active">
+                Compatibility
+              </td>
+              <td className="border px-4 py-4">{res.compatibility}</td>
+            </tr>
+            <tr>
+              <td className="border border-secondary px-4 py-4 text-active">
+                Date Range
+              </td>
+              <td className="border px-4 py-4">{res.date_range}</td>
+            </tr>
+            <tr>
+              <td className="border border-secondary px-4 py-4 text-active">
+                Lucky Number
+              </td>
+              <td className="border px-4 py-4">{res.lucky_number}</td>
+            </tr>
+            <tr>
+              <td className="border border-secondary px-4 py-4 text-active">
+                Mood
+              </td>
+              <td className="border px-4 py-4">{res.mood}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div className="flex flex-col mt-10 justify-end h-36">
         <p className="block mb-10 text-center text-secondary text-xs">
@@ -57,4 +113,21 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await axios.post("http://localhost:3000/api/horoscope");
+  const { data } = res;
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      data,
+    },
+  };
 }
