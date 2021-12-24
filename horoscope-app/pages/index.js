@@ -1,23 +1,24 @@
 import { useState } from "react";
 import axios from "axios";
 
+const signs = [
+  "Aries",
+  "Taurus",
+  "Gemini",
+  "Cancer",
+  "Leo",
+  "Virgo",
+  "Libra",
+  "Scorpio",
+  "Sagittarius",
+  "Capricorn",
+  "Aquarius",
+  "Pisces",
+];
+
 export default function Home({ data }) {
   const [res, setRes] = useState(data);
   const [selectedSign, setSelectedSign] = useState("");
-  const signs = [
-    "Aries",
-    "Taurus",
-    "Gemini",
-    "Cancer",
-    "Leo",
-    "Virgo",
-    "Libra",
-    "Scorpio",
-    "Sagittarius",
-    "Capricorn",
-    "Aquarius",
-    "Pisces",
-  ];
 
   /**
    *
