@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     params: { imdbid: req.query.id },
     headers: {
       "x-rapidapi-host": "ott-details.p.rapidapi.com",
-      "x-rapidapi-key": "69ae23e117mshaa398c157f895bdp15c0a5jsnfcd183159b31",
+      "x-rapidapi-key": NEXT_PUBLIC_RAPIDAPI_KEY,
     },
   };
 
