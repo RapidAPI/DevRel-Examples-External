@@ -23,17 +23,14 @@ export default function Home() {
   };
   const getTitleDetails = async (id) => {
     try {
-      console.log(id);
       setLoading(true);
       const res = await axios.get("api/details/", {
         params: { id },
       });
       const { data } = res;
       setLoading(false);
-      console.log(data);
       setTitleDetails(data);
       setStreamingInfo(data.streamingAvailability.country.US);
-      console.log(streamingInfo);
     } catch (error) {
       setLoading(false);
     }
