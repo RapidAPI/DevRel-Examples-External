@@ -34,7 +34,7 @@ export default function Home({ data }) {
           className="outline-none w-48 border border-active font-bold font-raleway ml-4 px-12 py-2 rounded-sm bg-active text-primary transition duration-300 hover:bg-background hover:text-secondary md:ml-0 md:mt-4"
           onClick={getFact}
         >
-          New Quote
+          New Fact
         </button>
       </div>
       <div className="flex flex-col mt-10 justify-end h-36 md:h-24">
