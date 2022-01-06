@@ -1,7 +1,7 @@
 ![cover](assets/cover.png)
 
 <div align="center">
-	<h2>Joke App</h2>
+	<h2>Quote App</h2>
 </div>
 
 > [Live Preview](https://rapidapi-example-quote-app.vercel.app/)
