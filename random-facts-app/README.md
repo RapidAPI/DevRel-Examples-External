@@ -1,10 +1,10 @@
 ![cover](assets/cover.png)
 
 <div align="center">
-	<h2>Quote App</h2>
+	<h2>Random Facts App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-quote-app.vercel.app/)
+> [Live Preview](https://rapidapi-example-random-facts-app.vercel.app/)
 
 ### ⚡️ Features
 
@@ -22,7 +22,7 @@ git clone https://github.com/RapidAPI/DevRel-Examples-External.git
 2. Change the working directory
 
 ```bash
-cd DevRel-Examples-External/quote-app
+cd DevRel-Examples-External/random-facts-app
 ```
 
 3. Install dependencies
