@@ -7,16 +7,14 @@ export default async function handler(req, res) {
     params: { title: req.query.title, page: "1" },
     headers: {
       "x-rapidapi-host": "ott-details.p.rapidapi.com",
-      "x-rapidapi-key": NEXT_PUBLIC_RAPIDAPI_KEY,
+      "x-rapidapi-key": "69ae23e117mshaa398c157f895bdp15c0a5jsnfcd183159b31",
     },
   };
 
-  await axios
-    .request(options)
-    .then(function (response) {
-      res.status(200).json(response.data);
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
+  try {
+    let response = await axios(options);
+    res.status(200).json(response.data);
+  } catch (error) {
+    console.error(error.response);
+  }
 }
