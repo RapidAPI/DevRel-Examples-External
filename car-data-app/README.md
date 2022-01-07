@@ -1,15 +1,15 @@
 ![cover](assets/cover.png)
 
 <div align="center">
-	<h2>Quote App</h2>
+	<h2>Car Data App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-quote-app.vercel.app/)
+> [Live Preview](https://rapidapi-example-car-data-app.vercel.app/)
 
 ### ⚡️ Features
 
-- Show different quotes
-- Mobile Friendly
+- Show different car details
+- Let user search cars based on make and model
 
 ### 🛠️ Installation Steps
 
@@ -22,7 +22,7 @@ git clone https://github.com/RapidAPI/DevRel-Examples-External.git
 2. Change the working directory
 
 ```bash
-cd DevRel-Examples-External/quote-app
+cd DevRel-Examples-External/car-data-app
 ```
 
 3. Install dependencies

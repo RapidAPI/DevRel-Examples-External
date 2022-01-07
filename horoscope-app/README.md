@@ -1,14 +1,14 @@
 ![cover](assets/cover.png)
 
 <div align="center">
-	<h2>Quote App</h2>
+	<h2>Horoscope App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-quote-app.vercel.app/)
+> [Live Preview](https://rapidapi-example-horoscope-app.vercel.app/)
 
 ### ⚡️ Features
 
-- Show different quotes
+- Show horoscopes of different zodiac signs
 - Mobile Friendly
 
 ### 🛠️ Installation Steps
@@ -22,7 +22,7 @@ git clone https://github.com/RapidAPI/DevRel-Examples-External.git
 2. Change the working directory
 
 ```bash
-cd DevRel-Examples-External/quote-app
+cd DevRel-Examples-External/horoscope-app
 ```
 
 3. Install dependencies
