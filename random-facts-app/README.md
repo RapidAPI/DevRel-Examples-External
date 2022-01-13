@@ -8,7 +8,7 @@
 
 ### ⚡️ Features
 
-- Show different quotes
+- Show different facts
 - Mobile Friendly
 
 ### 🛠️ Installation Steps
