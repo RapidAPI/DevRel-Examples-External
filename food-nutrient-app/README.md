@@ -1,14 +1,14 @@
 ![cover](assets/cover.png)
 
 <div align="center">
-	<h2>Random Facts App</h2>
+	<h2>Food Nutrient App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-random-facts-app.vercel.app/)
+> [Live Preview](https://rapidapi-example-food-nutrient-app.vercel.app/)
 
 ### ⚡️ Features
 
-- Show different facts
+- Show different nutrients
 - Mobile Friendly
 
 ### 🛠️ Installation Steps
@@ -22,7 +22,7 @@ git clone https://github.com/RapidAPI/DevRel-Examples-External.git
 2. Change the working directory
 
 ```bash
-cd DevRel-Examples-External/random-facts-app
+cd DevRel-Examples-External/food-nutrient-app
 ```
 
 3. Install dependencies
