@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default async function handler(req, res) {
+export default function handler(req, res) {
   const options = {
     method: "GET",
     url: "https://carbonfootprint1.p.rapidapi.com/CarbonFootprintFromCarTravel",
