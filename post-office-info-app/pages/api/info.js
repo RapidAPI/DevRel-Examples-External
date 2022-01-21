@@ -3,12 +3,14 @@ import axios from "axios";
 export default function handler(req, res) {
   if (req.method === "GET") {
     const options = {
-      method: "GET",
-      url: `https://wyre-data.p.rapidapi.com/restaurants/localauthority/${req.query.area}`,
+      method: "POST",
+      url: "https://pincode.p.rapidapi.com/",
       headers: {
-        "x-rapidapi-host": "wyre-data.p.rapidapi.com",
+        "content-type": "application/json",
+        "x-rapidapi-host": "pincode.p.rapidapi.com",
         "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
       },
+      data: { searchBy: "pincode", value: req.query.pinCode },
     };
 
     axios
