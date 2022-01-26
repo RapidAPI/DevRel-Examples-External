@@ -11,6 +11,10 @@
 - Search Domains to check their availabiltiy.
 - Get detailed WHOIS info about the said domain.
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-domain-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

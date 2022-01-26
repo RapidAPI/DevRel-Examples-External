@@ -11,6 +11,10 @@
 - Search movies and TV shows.
 - Check their availability on 150 plus streaming platforms.
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-streaming-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

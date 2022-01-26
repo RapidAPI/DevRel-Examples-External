@@ -10,6 +10,10 @@
 
 - Calculate your carbon footprint using the CarbonFootprint API.
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-carbon-footprint-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

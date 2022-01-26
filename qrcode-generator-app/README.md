@@ -6,6 +6,10 @@
 
 > [Live Preview](https://rapidapi-example-qrcode.vercel.app/)
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-qrcode-app)
+
 ### ⚡️ Features
 
 - Quick and reliable conversion of text into QR Code.

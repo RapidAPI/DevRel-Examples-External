@@ -10,6 +10,10 @@
 
 - Show the latest Crypto News using the Cryptocurrency API from RapidAPI Hub.
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-crypto-news-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

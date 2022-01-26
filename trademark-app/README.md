@@ -11,6 +11,10 @@
 - Search trademarks.
 - Check availibility of a trademark keyword.
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-trademark-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository
