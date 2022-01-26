@@ -10,6 +10,10 @@
 
 - Get details of a country using GeoDB, a GraphQL API.
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-graphql-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

@@ -10,6 +10,10 @@
 
 - Show Football stats using the Football Web Pages API.
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-sports-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

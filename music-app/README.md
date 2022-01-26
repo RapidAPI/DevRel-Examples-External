@@ -6,6 +6,10 @@
 
 > [Live Preview](https://rapidapi-example-music-app.vercel.app/)
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-music-app)
+
 ### ⚡️ Features
 
 - Discover music using Shazam API from RapidAPI Hub.

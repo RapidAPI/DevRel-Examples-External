@@ -6,6 +6,10 @@
 
 > [Live Preview](https://rapidapi-example-real-estate-app.vercel.app/)
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-real-estate-app)
+
 ### ⚡️ Features
 
 - Find properties for sale in United States.

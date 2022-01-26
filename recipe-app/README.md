@@ -11,6 +11,10 @@
 - Search for food recipes from over 365,000 recipes using Spoonacular API from RapidAPI Hub.
 - Filter results based on diet types and ingredients to be excluded.
 
+## Guide
+
+[Read a step-by-step guide to build this application.](https://rapidapi.com/guides/build-recipe-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository
