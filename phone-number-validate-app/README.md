@@ -12,6 +12,10 @@
 - Provide other information related to phone number
 - Mobile Friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-phone-number-validation-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

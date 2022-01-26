@@ -12,6 +12,10 @@
 - Display Max and Min Temperature
 - Mobile friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-weather-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

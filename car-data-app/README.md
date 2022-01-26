@@ -11,6 +11,10 @@
 - Show different car details
 - Let user search cars based on make and model
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-car-data-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

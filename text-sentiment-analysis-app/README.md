@@ -11,6 +11,10 @@
 - Analyse how your text sounds like.
 - Mobile friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-text-sentiment-analysis-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

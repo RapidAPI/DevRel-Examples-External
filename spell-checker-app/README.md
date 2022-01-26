@@ -11,6 +11,10 @@
 - Checks for Spelling errors in content
 - Mobile friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-spell-checker-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

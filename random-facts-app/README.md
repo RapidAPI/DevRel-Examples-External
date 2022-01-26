@@ -11,6 +11,10 @@
 - Show different facts
 - Mobile Friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-random-facts-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

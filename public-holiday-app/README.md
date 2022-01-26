@@ -12,6 +12,10 @@
 - Show Holidays of the next 10 Years
 - Mobile Friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-public-holiday-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

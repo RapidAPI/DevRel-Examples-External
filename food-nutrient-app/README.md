@@ -11,6 +11,10 @@
 - Show different nutrients
 - Mobile Friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-food-nutrient-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

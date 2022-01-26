@@ -12,6 +12,10 @@
 - Provides you with top news
 - Mobile friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-news-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository
