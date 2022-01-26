@@ -11,6 +11,10 @@
 - Show Jokes from different categories
 - Mobile Friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-joke-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

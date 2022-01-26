@@ -11,6 +11,10 @@
 - Show different restaurants in a UK district
 - Mobile Friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-uk-restaurant-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

@@ -11,6 +11,10 @@
 - Shows post office info using the pin code
 - Mobile friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-post-office-info-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

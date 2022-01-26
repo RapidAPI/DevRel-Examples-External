@@ -11,6 +11,10 @@
 - Extract all the text from the provided URL.
 - Mobile friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-text-extraction-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

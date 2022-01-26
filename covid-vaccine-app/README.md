@@ -11,6 +11,10 @@
 - Show vaccine statistics across multiple countries
 - Mobile friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-covid-vaccine-stats-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

@@ -12,6 +12,10 @@
 - Provide other information related to email address
 - Mobile friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-email-validator-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

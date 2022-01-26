@@ -16,6 +16,10 @@ Provides you with the following details:
 - UTC Offset
 - Client IP
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-time-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

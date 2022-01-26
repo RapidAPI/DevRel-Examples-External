@@ -11,6 +11,10 @@
 - Show different anime details
 - Mobile Friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-anime-search-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository

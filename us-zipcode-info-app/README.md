@@ -11,6 +11,10 @@
 - Show all the area information using its Zipcode
 - Mobile friendly
 
+## 📖 Guide
+
+[*Read how we build this application*](https://rapidapi.com/guides/build-us-zip-code-info-app)
+
 ### 🛠️ Installation Steps
 
 1. Clone the repository
