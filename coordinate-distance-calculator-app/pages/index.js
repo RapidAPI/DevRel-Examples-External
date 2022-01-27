@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center relative min-h-screen">
-      <h2 className="font-raleway font-bold text-6xl text-primary pt-20 pb-6 md:text-3xl">
+      <h2 className="font-raleway font-bold text-center text-6xl text-primary pt-20 pb-6 md:text-3xl">
         Coordinate <span className="text-secondary">Distance</span> Calculator
         App
       </h2>
@@ -47,12 +47,12 @@ export default function Home() {
         >
           <input
             autoFocus={true}
-            className="border-none outline-none bg-primary px-4 py-2 w-1/6 mx-2 rounded-sm font-raleway md:w-full"
+            className="border-none outline-none bg-primary px-4 py-2 w-1/6 mx-2 rounded-sm font-raleway md:w-full md:mx-0"
             placeholder="Enter first coordinate set..."
             onChange={(e) => setFirstCoordinateSet(e.target.value)}
           />
           <input
-            className="border-none outline-none bg-primary px-4 py-2 w-1/6 mx-2 rounded-sm font-raleway md:w-full"
+            className="border-none outline-none bg-primary px-4 py-2 w-1/6 mx-2 rounded-sm font-raleway md:w-full md:mx-0"
             placeholder="Enter second coordinate set..."
             onChange={(e) => setSecondCoordinateSet(e.target.value)}
           />
@@ -64,7 +64,7 @@ export default function Home() {
           </button>
         </form>
         {res && (
-          <div className="flex flex-col mt-16 w-3/6 h-4/5 md:flex-col md:w-4/6 md:h-full md:mb-12">
+          <div className="flex flex-col mt-16 w-3/6 h-4/5 md:flex-col md:w-4/6 md:h-full md:mb-12 md:w-4/5">
             <p className="mb-12 border border-secondary text-primary font-raleway px-4 py-8 tracking-wide leading-8">
               The total distance between these two coordinates is {res.distance}{" "}
               Miles
