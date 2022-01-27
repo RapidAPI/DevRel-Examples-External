@@ -23,7 +23,6 @@ export default function Home() {
           secondCoordinateSet,
         },
       });
-      console.log(res.data);
       setRes(res.data);
     } catch (err) {
       console.log(err);
@@ -41,10 +40,7 @@ export default function Home() {
         Calculate the distance between two coordinates
       </h3>
       <div className="flex flex-col justify-between items-center w-full md:items-center">
-        <form
-          className="flex w-full justify-center md:flex-col md:w-5/6"
-          onSubmit={(e) => checkValidity(e)}
-        >
+        <form className="flex w-full justify-center md:flex-col md:w-5/6">
           <input
             autoFocus={true}
             className="border-none outline-none bg-primary px-4 py-2 w-1/6 mx-2 rounded-sm font-raleway md:w-full md:mx-0"
