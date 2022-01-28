@@ -2,8 +2,12 @@ import { useState } from "react";
 import axios from "axios";
 
 export default function Home() {
-  const [firstCoordinateSet, setFirstCoordinateSet] = useState("");
-  const [secondCoordinateSet, setSecondCoordinateSet] = useState("");
+  const [firstCoordinateSet, setFirstCoordinateSet] = useState(
+    "(42.335321,-71.023516)"
+  );
+  const [secondCoordinateSet, setSecondCoordinateSet] = useState(
+    "(47.373535,8.541109)"
+  );
   const [res, setRes] = useState("");
   const [btnText, setBtnText] = useState("Calculate");
 
@@ -23,9 +27,17 @@ export default function Home() {
           secondCoordinateSet,
         },
       });
-      setRes(res.data);
+
+      if (res.status === 404) {
+        throw err;
+      }
+
+      setRes(
+        `The total distance between these two coordinates is ${res.data.distance} Miles`
+      );
     } catch (err) {
       console.log(err);
+      setRes(`Something went wrong. Make sure coordinates are right.`);
     }
     setBtnText("Calculate");
   };
@@ -45,11 +57,13 @@ export default function Home() {
             autoFocus={true}
             className="border-none outline-none bg-primary px-4 py-2 w-1/6 mx-2 rounded-sm font-raleway md:w-full md:mx-0"
             placeholder="Enter first coordinate set..."
+            value={firstCoordinateSet}
             onChange={(e) => setFirstCoordinateSet(e.target.value)}
           />
           <input
             className="border-none outline-none bg-primary px-4 py-2 w-1/6 mx-2 rounded-sm font-raleway md:w-full md:mx-0"
             placeholder="Enter second coordinate set..."
+            value={secondCoordinateSet}
             onChange={(e) => setSecondCoordinateSet(e.target.value)}
           />
           <button
@@ -62,8 +76,7 @@ export default function Home() {
         {res && (
           <div className="flex flex-col mt-16 w-3/6 h-4/5 md:flex-col md:w-4/6 md:h-full md:mb-12 md:w-4/5">
             <p className="mb-12 border border-secondary text-primary font-raleway px-4 py-8 tracking-wide leading-8">
-              The total distance between these two coordinates is {res.distance}{" "}
-              Miles
+              {res}
             </p>
           </div>
         )}
