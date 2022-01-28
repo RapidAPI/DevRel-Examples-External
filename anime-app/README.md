@@ -22,7 +22,7 @@
 2. Unzip the downloaded file and navigate to the working directory.
 
 ```bash
-cd RapidAPI\ DevRel-Examples-External\ main\ spell-checker-app/
+cd RapidAPI\ DevRel-Examples-External\ main\ anime-app/
 ```
 
 3. Install dependencies
