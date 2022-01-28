@@ -14,16 +14,12 @@ Translate text from English to French/Spanish/Russian/Hindi/Bengali/Arabic/Marat
 
 ## 🛠️ Installation Steps
 
-1. Clone the repository
+1. Download the `translation-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/translation-app) to download it.
+
+2. Unzip the downloaded file and navigate to the working directory.
 
 ```bash
-git clone https://github.com/RapidAPI/DevRel-Examples-External.git
-```
-
-2. Change the working directory
-
-```bash
-cd DevRel-Examples-External/translation-app
+cd RapidAPI\ DevRel-Examples-External\ main\ translation-app/
 ```
 
 3. Install dependencies

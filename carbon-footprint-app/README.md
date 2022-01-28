@@ -16,16 +16,12 @@
 
 ### 🛠️ Installation Steps
 
-1. Clone the repository
+1. Download the `carbon-footprint-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/carbon-footprint-app) to download it.
+
+2. Unzip the downloaded file and navigate to the working directory.
 
 ```bash
-git clone https://github.com/RapidAPI/DevRel-Examples-External.git
-```
-
-2. Change the working directory
-
-```bash
-cd DevRel-Examples-External/carbon-footprint-app
+cd RapidAPI\ DevRel-Examples-External\ main\ carbon-footprint-app/
 ```
 
 3. Install dependencies
