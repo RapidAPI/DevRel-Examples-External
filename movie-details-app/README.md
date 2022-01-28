@@ -18,16 +18,12 @@
 
 ### 🛠️ Installation Steps
 
-1. Clone the repository
+1. Download the `movie-details-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/movie-details-app) to download it.
+
+2. Unzip the downloaded file and navigate to the working directory.
 
 ```bash
-git clone https://github.com/RapidAPI/DevRel-Examples-External.git
-```
-
-2. Change the working directory
-
-```bash
-cd DevRel-Examples-External/movie-details-app
+cd RapidAPI\ DevRel-Examples-External\ main\ movie-details-app/
 ```
 
 3. Install dependencies

@@ -17,16 +17,12 @@
 
 ### 🛠️ Installation Steps
 
-1. Clone the repository
+1. Download the `us-zipcode-info-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/us-zipcode-info-app) to download it.
+
+2. Unzip the downloaded file and navigate to the working directory.
 
 ```bash
-git clone https://github.com/RapidAPI/DevRel-Examples-External.git
-```
-
-2. Change the working directory
-
-```bash
-cd DevRel-Examples-External/us-zipcode-info-app
+cd RapidAPI\ DevRel-Examples-External\ main\ us-zipcode-info-app/
 ```
 
 3. Install dependencies
