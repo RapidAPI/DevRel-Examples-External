@@ -15,8 +15,9 @@ export default function Home() {
       const { data } = res;
       setLoading(false);
       setResponse(data.screenshotUrl);
-    } catch (error) {
+    } catch (err) {
       setLoading(false);
+      setError(err);
     }
   };
 
@@ -53,6 +54,13 @@ export default function Home() {
           {loading ? <>Loading..</> : <>Submit</>}
         </button>
       </form>
+
+      {error && (
+        <span className="text-active text-xl mt-6">
+          Error: Failed to get the screenshot. Please try again.
+        </span>
+      )}
+
       {response && (
         <div className="mt-10 ">
           <h2 className="text-xl font-bold text-active">Screenshot</h2>
