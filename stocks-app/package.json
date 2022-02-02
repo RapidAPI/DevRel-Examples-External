@@ -1,5 +1,5 @@
 {
-  "name": "movie-details-app",
+  "name": "stocks-app",
   "private": true,
   "scripts": {
     "dev": "next dev",
