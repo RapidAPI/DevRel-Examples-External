@@ -19,6 +19,7 @@ export default function handler(req, res) {
         res.status(200).json(response.data);
       })
       .catch(function (error) {
+        res.status(404).json(error);
         console.error(error);
       });
   } else {

@@ -18,9 +18,15 @@ export default function Home() {
         text,
       });
 
+      if (res.status === 404) {
+        throw err;
+      }
+
       setRes(res.data.matches[0].message);
     } catch (err) {
-      console.log(err);
+      setRes(
+        "Error: Make sure you have written/pasted something in the content box."
+      );
     }
 
     setBtnText("Check");
