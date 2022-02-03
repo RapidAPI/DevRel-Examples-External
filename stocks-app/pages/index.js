@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 export default function Home() {
-  const [stock, setStock] = useState("");
+  const [stock, setStock] = useState("Fb");
   const [btnText, setBtnText] = useState("Search");
   const [res, setRes] = useState(null);
   const [error, setError] = useState(null);
@@ -49,6 +49,7 @@ export default function Home() {
             type="text"
             className="border-none outline-none w-2/5 bg-primary px-4 py-2 rounded-sm font-raleway md:w-full"
             placeholder="Name of stock..."
+            value={stock}
             onChange={(e) => setStock(e.target.value)}
           />
           <button
