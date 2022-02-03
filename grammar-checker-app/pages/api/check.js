@@ -10,7 +10,7 @@ export default function handler(req, res) {
         "x-rapidapi-host": "grammarbot.p.rapidapi.com",
         "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
       },
-      data: { text: req.body.text, language: "en-US" },
+      params: { text: req.body.text, language: "en-US" },
     };
 
     axios
