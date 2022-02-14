@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function Home() {
-  const [title, setTitle] = useState(null);
+  const [title, setTitle] = useState("Alan Walker");
   const [searchResults, setSearchResults] = useState(null);
   const [lyrics, setLyrics] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -54,7 +54,7 @@ export default function Home() {
         <input
           type="text"
           className="flex w-full sm:w-1/3 rounded-lg px-5 py-3 text-base text-background font-semibold focus:outline-none focus:ring-2 focus:ring-active"
-          placeholder="Enter the song title"
+          placeholder="Alan Walker"
           onChange={(e) => {
             setTitle(e.target.value);
             setSearchResults(null);
