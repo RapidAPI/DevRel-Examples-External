@@ -2,22 +2,19 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function Home() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState(
+    "All new members who join after 12:00pm EST on December 1st will pay either $29/month or $299/year.  If you join right now you can join at either $20/month or $197/year (or possibly much lower, if you live outside the US). It's your last chance to save 20% off annual plans with code GET20."
+  );
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const exampleText =
-    "All new members who join after 12:00pm EST on December 1st will pay either $29/month or $299/year.  If you join right now you can join at either $20/month or $197/year (or possibly much lower, if you live outside the US). It's your last chance to save 20% off annual plans with code GET20.";
-
   const getResponse = async () => {
     try {
-      console.log(text);
       setLoading(true);
       const res = await axios.get("api/check/", {
         params: { text },
       });
       const spamScore = (res.data.spamScore * 100).toFixed(2);
-      console.log(spamScore);
       setResponse(spamScore);
       setLoading(false);
     } catch (error) {
@@ -51,7 +48,7 @@ export default function Home() {
               name="text"
               id="text"
               className="focus:outline-none focus:ring-2 w-full focus:ring-active text-base p-2 rounded-md"
-              defaultValue={exampleText}
+              defaultValue={text}
               onChange={(e) => setText(e.target.value)}
             />
           </div>
