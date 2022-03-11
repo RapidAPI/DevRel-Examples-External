@@ -1,28 +1,28 @@
 ![cover](assets/cover.png)
 
 <div align="center">
-	<h2>Car Data App</h2>
+	<h2>Sentence Generator App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-car-data-app.vercel.app/)
+> [Live Preview](https://rapidapi-example-sentence-generator-app.vercel.app/)
 
 ### ⚡️ Features
 
-- Show different car details
-- Let user search cars based on make and model
+- Generate a sentence using a few keywords
+- Mobile friendly
 
 ## 📖 Guide
 
-[*Read how we build this application*](https://rapidapi.com/guides/build-car-data-app)
+[*Read how we build this application*](https://rapidapi.com/guides/build-sentence-generator-app)
 
 ### 🛠️ Installation Steps
 
-1. Download the `car-data-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/car-data-app) to download it.
+1. Download the `sentence-generator-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/sentence-generator-app) to download it.
 
 2. Unzip the downloaded file and navigate to the working directory.
 
 ```bash
-cd RapidAPI\ DevRel-Examples-External\ main\ car-data-app/
+cd RapidAPI\ DevRel-Examples-External\ main\ sentence-generator-app/
 ```
 
 3. Install dependencies
