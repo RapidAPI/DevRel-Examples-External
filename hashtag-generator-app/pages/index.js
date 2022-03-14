@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function Home() {
-  const [keyword, setKeyword] = useState(null);
+  const [keyword, setKeyword] = useState('travel');
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -38,7 +38,7 @@ export default function Home() {
         <input
           type="text"
           className="sm:w-1/3 w-full rounded-lg px-5 py-3 text-background font-bold text-lg focus:outline-none focus:ring-2 focus:ring-active"
-          placeholder="Enter your keyword"
+          placeholder="Enter your keyword eg: travel"
           onChange={(e) => {
             setKeyword(e.target.value);
             setResponse(null);
