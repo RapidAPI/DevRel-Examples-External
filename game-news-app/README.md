@@ -17,7 +17,7 @@
 
 ### 🛠️ Installation Steps
 
-1. Download the `game-news-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/anime-app) to download it.
+1. Download the `game-news-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/game-news-app) to download it.
 
 2. Unzip the downloaded file and navigate to the working directory.
 
