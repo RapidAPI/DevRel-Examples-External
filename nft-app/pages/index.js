@@ -16,7 +16,6 @@ export default function Home() {
       setSearchResults(data); // Add the data to the results state
       setLoading(false);
     } catch (error) {
-      console.log(error);
       setLoading(false);
     }
   };
