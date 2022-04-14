@@ -40,7 +40,6 @@ export default function Home() {
         },
       });
 
-      console.log(res.data);
       setResponse(res.data);
     } catch (err) {
       console.log(err);
