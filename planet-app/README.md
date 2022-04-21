@@ -1,28 +1,28 @@
 ![cover](assets/cover.png)
 
 <div align="center">
-	<h2>UK Restaurant App</h2>
+	<h2>Planet App</h2>
 </div>
 
-> [Live Preview](https://rapidapi-example-uk-restaurant-app.vercel.app/)
+> [Live Preview](https://rapidapi-example-planet-app.vercel.app/)
 
 ### ⚡️ Features
 
-- Show different restaurants in a UK district
+- Show information about different planets
 - Mobile Friendly
 
 ## 📖 Guide
 
-[*Read how we build this application*](https://rapidapi.com/guides/build-uk-restaurant-app)
+[*Read how we build this application*](https://rapidapi.com/guides/build-planet-app)
 
 ### 🛠️ Installation Steps
 
-1. Download the `uk-restaurant-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/uk-restaurant-app) to download it.
+1. Download the `planet-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/planet-app) to download it.
 
 2. Unzip the downloaded file and navigate to the working directory.
 
 ```bash
-cd RapidAPI\ DevRel-Examples-External\ main\ uk-restaurant-app/
+cd RapidAPI\ DevRel-Examples-External\ main\ planet-app/
 ```
 
 3. Install dependencies
