@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         <div className="mt-12 flex max-w-xl flex-col flex-wrap sm:w-full border border-gray-300 p-6 rounded-md shadow-sm">
           <div>
             <div className="flex">
-              <p className="flex items-center justify-center rounded-lg w-[30px] h-[30px] bg-[#ef386a] text-white">
+              <p className="flex items-center justify-center rounded-[99px] w-[30px] h-[30px] bg-[#ef386a] text-white">
                 <span className="text-sm">1</span>
               </p>
               <p className="mt-1 ml-2">
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
           </div>
           <div className="mt-6">
             <div className="flex">
-              <p className="flex items-center justify-center rounded-lg w-[30px] h-[30px] bg-[#ef386a] text-white">
+              <p className="flex items-center justify-center rounded-[99px] w-[30px] h-[30px] bg-[#ef386a] text-white">
                 <span className="text-sm">2</span>
               </p>
               <p className="mt-1 ml-2">
