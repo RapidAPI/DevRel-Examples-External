@@ -30,6 +30,7 @@ const Home: NextPage = () => {
   const generateCompanyLogo = async () => {
     buttonRef.current!.disabled = true;
     try {
+      buttonRef.current!.innerText = "Generating logo...";
       const response = await axios.post("/api/generate", {
         brandColors: hexValues,
         description,
@@ -38,8 +39,10 @@ const Home: NextPage = () => {
     } catch (err) {
       console.log(err);
       setLogo(null)
+    } finally {
+      buttonRef.current!.innerText = "Generate logo";
+      buttonRef.current!.disabled = false;
     }
-    buttonRef.current!.disabled = false;
   };
 
   return (
@@ -85,7 +88,6 @@ const Home: NextPage = () => {
                 onClick={() => {
                   setHexValueInputBox([...hexValueInputBox, 1]);
                 }}
-                ref={buttonRef}
               >
                 +
               </button>
@@ -112,6 +114,7 @@ const Home: NextPage = () => {
               <button
                 className="w-full py-2 md:text-sm bg-[#081477] rounded-md text-white"
                 onClick={generateCompanyLogo}
+                ref={buttonRef}
               >
                 Generate logo
               </button>
