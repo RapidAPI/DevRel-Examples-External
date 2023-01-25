@@ -2,36 +2,41 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
-type Data = {
-  name: string;
-};
-
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse
 ) {
   if (req.method === "POST") {
+    const { brandColors, description } = req.body;
+
+    const allBrandColors = brandColors.join(", ");
+
     const options = {
-      prompt: 'Generate a logo for a company called "Acme"',
-      n: 2,
+      prompt: `Generate a logo in PNG for a company whose brand colors are ${allBrandColors} and whose description is ${description}`,
+      n: 1,
       size: "1024x1024",
     };
+    console.log(options);
 
-    axios.interceptors.request.use((config) => {
-      config.headers["Content-Type"] = "application/json";
-      config.headers["Authorization"] = "Bearer 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";
-      return config;
-    });
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+      },
+    };
 
     try {
       const response = await axios.post(
         "https://api.openai.com/v1/images/generations",
-        options
+        options,
+        config
       );
 
       console.log(response);
-      res.status(200).json({ name: "John Doe" });
+      res.status(200).json(response.data);
     } catch (err) {
+      res.status(500).json({ error: err });
       console.log(err);
     }
   }
