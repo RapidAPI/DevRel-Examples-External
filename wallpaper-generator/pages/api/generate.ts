@@ -7,13 +7,10 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
-    const { company, brandColors, description } = req.body;
+    const { description } = req.body;
 
-    const allBrandColors = brandColors.join(", ");
-
-    /* `Create a logo of ${company} with brand colors ${allBrandColors} and description: ${description}` */
     const options = {
-      prompt: 'Create a logo. Company name is Rapid API. Brand colors are #00ff00, #0000ff, #ff0000. Description: "Rapid API is a platform for developers to discover, test, and integrate APIs into their applications."',
+      prompt: description,
       n: 1,
       size: "1024x1024",
     };
