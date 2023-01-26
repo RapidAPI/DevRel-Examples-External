@@ -5,8 +5,9 @@ import Image from "next/image";
 import axios from "axios";
 
 const Home: NextPage = () => {
-  const [hexValueInputBox, setHexValueInputBox] = useState<number[]>([1]);
-  const [description, setDescription] = useState<string>("Generate milky way wallpaper");
+  const [description, setDescription] = useState<string>(
+    "Generate milky way wallpaper"
+  );
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [wallpaper, setWallpaper] = useState<string | null>(null);
 
@@ -76,7 +77,7 @@ const Home: NextPage = () => {
         {wallpaper && (
           <div className="mt-12">
             <h2 className="mb-12 font-bold">Here is your wallpaper ↓</h2>
-            <a href={wallpaper!} title="wallpaper">
+            <a href={wallpaper!} title="wallpaper" download={true}>
               <Image
                 src={wallpaper!}
                 width={512}
@@ -88,6 +89,15 @@ const Home: NextPage = () => {
           </div>
         )}
       </main>
+      <div className="flex flex-col mt-10 justify-center">
+        <p className="block mt-10 mb-10 text-center text-secondary text-xs uppercase font-bold">
+          Made by{" "}
+          <a href="https://rapidapi.com/?utm_source=github.com/RapidAPI&utm_medium=DevRel&utm_campaign=DevRel" className="underline">
+            Rapid
+          </a>{" "}
+          DevRel Team • Powered by <a href="https://openai.com/" className="underline">OpenAI</a>
+        </p>
+      </div>
     </div>
   );
 };
