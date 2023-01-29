@@ -40,9 +40,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center my-16">
+      <main className="flex w-full flex-1 flex-col items-center justify-center md:px-20 text-center my-16">
         <h1 className="text-7xl font-bold font-sans text-[#0055d9]">WallAI</h1>
-        <p className="mt-8 text-2xl w-2/5 text-[#081477] font-bold">
+        <p className="mt-8 text-2xl md:w-2/5 text-[#081477] font-bold">
           Create unique and stunning wallpapers using API
         </p>
 
