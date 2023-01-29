@@ -29,7 +29,6 @@ export default async function handler(
         config
       );
 
-      console.log(response);
       res.status(200).json(response.data);
     } catch (err) {
       res.status(500).json({ error: err });
