@@ -1,27 +1,46 @@
-# Next.js + Tailwind CSS Example
+![cover](assets/cover.png)
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+<div align="center">
+	<h2>Wallpaper Generator App</h2>
+</div>
 
-## Deploy your own
+> [Live Preview](https://rapidapi-example-wallpaper-generator-app.vercel.app/)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+### ⚡️ Features
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+- Generator wallpapers using AI
+- Mobile friendly
 
-## How to use
+## 📖 Guide
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+[*Read how we build this application*](https://rapidapi.com/guides/build-ai-wallpaper-generator)
+
+### 🛠️ Installation Steps
+
+1. Download the `wallpaper-generator` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/wallpaper-generator) to download it.
+
+2. Unzip the downloaded file and navigate to the working directory.
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+cd DevRel-Examples-External\ wallpaper-generator
 ```
+
+3. Install dependencies
 
 ```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+npm install
 ```
+
+4. Navigate to [OpenAI APIs](https://openai.com/api/) and sign up. Generate your API key. Create `.env.local` file in root and add your OpenAI API key.
 
 ```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+5. Run the app
+
+```bash
+npm run dev
+```
+
+You are all set! Open [localhost:3000](http://localhost:3000/) to see the app.
