@@ -10,7 +10,7 @@ export default async function handler(
     const { description } = req.body;
 
     const options = {
-      prompt: description,
+      prompt: `Generate a wallpaper like ${description}`,
       n: 1,
       size: "1024x1024",
     };

@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Home: NextPage = () => {
   const [description, setDescription] = useState<string>(
-    "Generate milky way wallpaper"
+    "Milky way galaxy"
   );
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [wallpaper, setWallpaper] = useState<string | null>(null);
