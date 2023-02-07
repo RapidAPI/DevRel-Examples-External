@@ -95,7 +95,7 @@ const Home: NextPage = () => {
           <a href="https://rapidapi.com/?utm_source=github.com/RapidAPI&utm_medium=DevRel&utm_campaign=DevRel" className="underline">
             Rapid
           </a>{" "}
-          DevRel Team • Powered by <a href="https://openai.com/" className="underline">OpenAI</a>
+          DevRel Team • Powered by <a href="https://openai.com/" className="underline">OpenAI</a> and <a href="https://rapidapi.com/hub?utm_source=RapidAPI.com/examples&utm_medium=DevRel&utm_campaign=DevRel">Rapid</a>
         </p>
       </div>
     </div>
