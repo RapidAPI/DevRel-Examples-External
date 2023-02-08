@@ -4,11 +4,16 @@ import Head from "next/head";
 import Image from "next/image";
 import axios from "axios";
 
-const Home: NextPage = () => {
+type IProps = {
+  data: string[];
+}
+
+const Home: NextPage<IProps> = ({ data }) => {
   const [description, setDescription] = useState<string>(
-    "Milky way galaxy"
+    data[0]
   );
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const suggestButtonRef = useRef<HTMLButtonElement>(null);
   const [wallpaper, setWallpaper] = useState<string | null>(null);
 
   /**
@@ -18,6 +23,7 @@ const Home: NextPage = () => {
    */
   const generateWallpaper = async () => {
     buttonRef.current!.disabled = true;
+    setWallpaper(null);
     try {
       buttonRef.current!.innerText = "Generating wallpaper...";
       const response = await axios.post("/api/generate", {
@@ -32,6 +38,34 @@ const Home: NextPage = () => {
       buttonRef.current!.disabled = false;
     }
   };
+
+  const suggestWallpaper = async () => {
+    buttonRef.current!.disabled = true;
+    suggestButtonRef.current!.disabled = true;
+    setWallpaper(null);
+
+    // Get random word from data
+    const index = Math.floor(Math.random() * data.length);
+    const word = data[index];
+    data.slice(index, 1);
+
+    setDescription(word);
+
+    try {
+      suggestButtonRef.current!.innerText = "Suggesting wallpaper...";
+      const response = await axios.post("/api/generate", {
+        description: word,
+      });
+      setWallpaper(response.data.data[0].url);
+    } catch (err) {
+      console.log(err);
+      setWallpaper(null);
+    } finally {
+      suggestButtonRef.current!.innerText = "Suggest wallpaper";
+      buttonRef.current!.disabled = false;
+      suggestButtonRef.current!.disabled = false;
+    }
+  }
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
@@ -64,7 +98,14 @@ const Home: NextPage = () => {
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
-          <div className="mt-6 flex justify-center w-full">
+          <div className="mt-6 flex space-x-4 justify-center w-full">
+            <button
+              className="w-full py-2 md:text-sm bg-[#081477] rounded-md text-white"
+              onClick={suggestWallpaper}
+              ref={suggestButtonRef}
+            >
+              Suggest wallpaper
+            </button>
             <button
               className="w-full py-2 md:text-sm bg-[#081477] rounded-md text-white"
               onClick={generateWallpaper}
@@ -95,7 +136,7 @@ const Home: NextPage = () => {
           <a href="https://rapidapi.com/?utm_source=github.com/RapidAPI&utm_medium=DevRel&utm_campaign=DevRel" className="underline">
             Rapid
           </a>{" "}
-          DevRel Team • Powered by <a href="https://openai.com/" className="underline">OpenAI</a> and <a href="https://rapidapi.com/hub?utm_source=RapidAPI.com/examples&utm_medium=DevRel&utm_campaign=DevRel">Rapid</a>
+          DevRel Team • Powered by <a href="https://openai.com/" className="underline">OpenAI</a> and <a href="https://rapidapi.com/hub?utm_source=RapidAPI.com/examples&utm_medium=DevRel&utm_campaign=DevRel" className="underline">Rapid</a>
         </p>
       </div>
     </div>
@@ -103,3 +144,20 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export async function getServerSideProps() {
+  const res = await axios.post("http://localhost:3000/api/list");
+  const { data } = res;
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      data,
+    },
+  };
+}

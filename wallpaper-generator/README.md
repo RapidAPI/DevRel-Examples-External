@@ -9,6 +9,7 @@
 ### ⚡️ Features
 
 - Generator wallpapers using AI
+- Suggest wallpapers
 - Mobile friendly
 
 ## 📖 Guide
