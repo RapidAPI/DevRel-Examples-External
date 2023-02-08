@@ -1,7 +1,7 @@
-![cover](assets/cover.png)
+![cover](assets/cover-1.png)
 
 <div align="center">
-	<h2>Wallpaper Generator App</h2>
+	<h2>AI Wallpaper Generator App</h2>
 </div>
 
 > [Live Preview](https://rapidapi-example-wallpaper-generator-app.vercel.app/)
