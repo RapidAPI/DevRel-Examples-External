@@ -6,7 +6,7 @@ This project is a **TypeScript**-based web application that shortens input text 
 
 ## 👀 Live Preview
 
-To view a live preview of the application, click [here](https://example.com).
+To view a live preview of the application, click [here](https://ai-text-shortener-app.vercel.app).
 
 ## 📖 Guide
 
