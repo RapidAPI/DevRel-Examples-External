@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.5",
+    "postcss": "^8.4.31",
     "prettier": "^2.4.1",
     "tailwindcss": "^2.2.4"
   }
